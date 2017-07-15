@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://fengqiaoye.com/post/hexo迁移.html">
 <meta property="og:site_name" content="枫桥夜">
 <meta property="og:description" content="hexo迁移">
-<meta property="og:updated_time" content="2017-06-29T02:06:45.759Z">
+<meta property="og:updated_time" content="2017-07-15T15:11:28.615Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo迁移">
 <meta name="twitter:description" content="hexo迁移">
@@ -407,6 +407,8 @@
 
       
         <p>最近把博客迁移到新电脑上(mac转windows),遇到了一些问题,最主要的是git的设置,因为我拷贝了之前的文件.在新电脑上安装了node和hexo,进行了hexo init,后来在提交的时候发现一直提交不上去,后来看了一些资料需要设置git的名字和邮箱,生成ssh秘钥,在github上添加ssh公钥.</p>
+<p>新环境与github的绑定:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</div></pre></td></tr></table></figure></p>
+<p>生成id_rsa.pub文件<br>打开github网站,在setting中的SSH and GPG keys点击New SSH keys,把id_rsa.pub文件中的内容复制到里面,并可以起一个标题<br>然后就可以愉快的使用hexo -d的命令了</p>
 <p>更改git的名字和邮箱<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.email &quot;youremail@.com&quot;</div><div class="line">git config --global user.name &quot;yourname&quot;</div></pre></td></tr></table></figure></p>
 <p>查看git的设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --list</div></pre></td></tr></table></figure></p>
 <p>遇到警告<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">The file will have its original line endings in your working directory.</div><div class="line">warning: LF will be replaced by CRLF in test/index.html.</div></pre></td></tr></table></figure></p>
